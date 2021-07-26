@@ -356,6 +356,9 @@ func handler(c *cli.Context) error {
 			}
 			urls = append(urls, scanner.Text())
 		}
+		for i := 0; i < len(urls); i++ {
+			fmt.Println("url number %v = %v", i, urls[i])
+		}
 		if scanner.Err() != nil {
 			return scanner.Err()
 		}
